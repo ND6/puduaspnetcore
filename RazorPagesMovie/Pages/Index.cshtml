@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">MY Movies Razor pages</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h2>MY Movies Razor pages</h2>
+    
+    @* <p asp-page="./Index" > Movies Index</p> *@
+    <p>
+        <a asp-page="./Movies/Index"> Movies Index</a>
+    </p>
+</div>
