@@ -13,7 +13,7 @@ namespace RazorPagesMovie
         public static void Main(string[] args)
         {
             Log.Logger = new LoggerConfiguration()
-                .WriteTo.File("logs.txt", rollingInterval: RollingInterval.Day)
+                .WriteTo.File("serilog/logs.txt", rollingInterval: RollingInterval.Day)
                 .CreateLogger();
 
             var host = CreateHostBuilder(args).Build();
