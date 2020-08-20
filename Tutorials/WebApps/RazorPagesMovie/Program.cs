@@ -15,7 +15,7 @@ namespace RazorPagesMovie
             Log.Logger = new LoggerConfiguration()
                 .WriteTo.File("logs.txt", rollingInterval: RollingInterval.Day)
                 .CreateLogger();
-            // CreateHostBuilder(args).Build().Run();
+
             var host = CreateHostBuilder(args).Build();
 
             using var scope = host.Services.CreateScope();
@@ -25,7 +25,6 @@ namespace RazorPagesMovie
             try
             {
                 logger.LogInformation("App init start.");
-
                 SeedData.Initialize(services);
             }
             catch (Exception ex)
