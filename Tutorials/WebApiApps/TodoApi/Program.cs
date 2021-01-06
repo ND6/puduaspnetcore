@@ -35,6 +35,7 @@ namespace TodoApi
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    // webBuilder.UseUrls("http://*:5000;http://localhost:5001;https://hostname:5002");
                 })
                 .UseSerilog();
     }
