@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using MyApi.Models;
 
 namespace MyApi
 {
@@ -26,6 +28,8 @@ namespace MyApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // services.AddDbContext<MyContext>(opt => opt.UseInMemoryDatabase("MyList"));
+            services.AddDbContext<MyContext>(opt => opt.UseSqlServer("Server=127.0.0.1;Database=DJClient_D1123;User Id=sa;Password=123456;"));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
